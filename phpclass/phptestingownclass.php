@@ -8,9 +8,14 @@ $result->color("grey");
 
 class Colormixing
 {
-    public function __construct(protected $name1,protected $name2)
+    protected $name1;
+    protected $name2;
+    public function __construct($name1,$name2)
     {
         
+        $this->name1=$name1;
+        $this->name2=$name2;
+
     }
     public function color($final){
         echo "You mixed $this->name1 with $this->name2 :Final result is $final color";
